@@ -17,16 +17,13 @@
     <div class="healthblink" id="healthbox">Health: 5</div>
     <div class='control-panel'>
         <div class='d-pad'>
-          <button id='up'>&#9650;</button>
-          <button id='right'>&#9658;</button>
+          <button onclick="upfun()" id='up'>&#9650;</button>
+          <button onclick="rightfun()" id='right'>&#9658;</button>
           <button id='center'></button>
-          <button id='down'>&#9660;</button>
-          <button id='left'>&#9668;</button>
+          <button id='down' onclick="downfun()">&#9660;</button>
+          <button id='left' onclick="leftfun()">&#9668;</button>
         </div>
       </div>
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
