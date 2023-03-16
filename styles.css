@@ -39,7 +39,7 @@ body {
 
 .can {
     animation: walky 1.2s steps(6) infinite;
-        /* forwards 5s linear infinite; */
+    /* forwards 5s linear infinite; */
     transition: grid-row-start 1s ease-out, grid-column-start 1s ease-out;
 }
 
@@ -116,6 +116,16 @@ body {
     color: rgb(26, 255, 0);
 }
 
+.control-panel {
+    display:none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+
+
 
 @media only screen and (max-width: 460px) {
     #board {
@@ -127,35 +137,148 @@ body {
 
     .man {
         background: url(image/smalldoral22.png);
-        width: 20.1px;
+        width: 25px;
         margin: auto;
-        height: 25px;
+        height: 30px;
     }
-    
-    
+
+
     .can {
         animation: walky 1.2s steps(6) infinite;
-            /* forwards 5s linear infinite; */
+        /* forwards 5s linear infinite; */
         transition: grid-row-start 1s ease-out, grid-column-start 1s ease-out;
     }
-    
+
     @keyframes walky {
         0% {
             background-position: 0px;
         }
-    
+
         100% {
-            background-position: 121px;
+            background-position: 145px;
         }
     }
-    
-    @keyframes forward {
-        0% {
-            transform: translateX(-100px);
-        }
-    
-        100% {
-            transform: translateX(1500px);
-        }
+
+    .mouse {
+        background: url(image/micee.png);
+        background-repeat: no-repeat;
     }
+
+    .food {
+        background: url(image/doracakemi.png);
+        background-repeat: no-repeat;
+    }
+
+
+    /* score */
+
+    #hiscorebox {
+        position: absolute;
+        right: 9px;
+        top: 5px;
+        font-family: 'New Tegomin', serif;
+        background-color: rgba(3, 3, 3, 0.597);
+        border-radius: 3px;
+        padding: 1px 3px;
+        font-size: 10px;
+        color: white;
+    }
+
+    #scorebox {
+        position: absolute;
+        right: 9px;
+        top: 25px;
+        font-family: 'New Tegomin', serif;
+        background-color: rgba(3, 3, 3, 0.597);
+        border-radius: 3px;
+        padding: 1px 3px;
+        font-size: 10px;
+        color: white;
+    }
+
+    #healthbox {
+        position: absolute;
+        right: 9px;
+        top: 45px;
+        font-family: 'New Tegomin', serif;
+        background-color: rgba(3, 3, 3, 0.597);
+        border-radius: 3px;
+        padding: 1px 3px;
+        font-size: 10px;
+        color: rgb(26, 255, 0);
+
+    }
+
+    .control-panel {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 110px;
+        display: block;
+    }
+        .d-pad {
+            position: absolute;
+            background: lightgreen;
+            /* top: 10px; */
+            bottom: 10%;
+            left: 38%;
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            border-radius: 12px;
+        }
+
+        .d-pad button {
+                position: absolute;
+                background: #262626;
+                border: none;
+                width: 30px;
+                height: 30px;
+            }
+
+            .d-pad #up {
+                top: 0;
+                left: calc(50% - 15px);
+                border: solid black 2px;
+                border-bottom: none;
+                border-radius: 8px 8px 0 0;
+            }
+
+            .d-pad #right {
+                right: 0;
+                top: calc(50% - 15px);
+                border: solid black 2px;
+                border-left: none;
+                border-radius: 0 8px 8px 0;
+            }
+
+            .d-pad #down {
+                bottom: 0;
+                left: calc(50% - 15px);
+                border: solid black 2px;
+                border-top: none;
+                border-radius: 0 0 8px 8px;
+            }
+
+            .d-pad #left {
+                left: 0;
+                top: calc(50% - 15px);
+                border: solid black 2px;
+                border-right: none;
+                border-radius: 8px 0 0 8px;
+            }
+
+            .d-pad #center {
+                left: calc(50% - 15px);
+                top: calc(50% - 15px);
+                background: #000;
+            }
+
+
+        .d-pad button {
+            background: black;
+            color: white;
+        }
+
+
 }
